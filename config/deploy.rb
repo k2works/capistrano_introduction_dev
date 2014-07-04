@@ -2,13 +2,13 @@
 lock '3.2.1'
 
 set :application, 'capistrano_introduction'
-set :repo_url, 'git@github.com:k2works/capistrano_introduction.git'
+set :repo_url, 'git@github.com:k2works/capistrano_introduction_dev.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/usr/share/nginx/www/capistrano_introduction_dev'
+set :deploy_to, '/usr/share/nginx/www/capistrano_introduction'
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -33,6 +33,8 @@ set :deploy_to, '/usr/share/nginx/www/capistrano_introduction_dev'
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+set :linked_files, %w{config/database.yml}
 
 namespace :deploy do
 
