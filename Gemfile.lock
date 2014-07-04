@@ -145,6 +145,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (= 1.6.2)
   capistrano (~> 3.0)
   capistrano-rails
   capistrano-rvm
