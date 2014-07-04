@@ -4,6 +4,10 @@ lock '3.2.1'
 set :application, 'capistrano_introduction'
 set :repo_url, 'git@github.com:k2works/capistrano_introduction_dev.git'
 
+# deploy.rb or stage file (staging.rb, production.rb or else)
+set :rvm_type, :system                    # Defaults to: :auto
+set :rvm_ruby_version, 'ruby-2.1.0@global'      # Defaults to: 'default'
+
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
