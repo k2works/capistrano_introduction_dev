@@ -21,11 +21,9 @@ task :forwarding do
   end
 end
 
-require 'rake'
-
-desc "Update Bundler"
+desc "Run Shell Command"
 task :update_bundler do
   on roles(:all) do |h|
-    execute :gem, %w{install bundler -v '= 1.5.1'}
+    execute :echo, %w{Hi!}
   end
 end
