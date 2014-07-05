@@ -8,6 +8,9 @@ role :app, %w{deploy@192.168.33.10}
 role :web, %w{deploy@192.168.33.10}
 role :db,  %w{deploy@192.168.33.10}
 
+set :stage, :staging
+set :rails_env, 'staging'
+set :migration_role, 'db'
 
 # Extended Server Syntax
 # ======================

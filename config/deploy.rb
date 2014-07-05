@@ -2,7 +2,7 @@
 lock '3.2.1'
 
 set :application, 'capistrano_introduction'
-set :repo_url, 'git@github.com:k2works/capistrano_introduction_dev.git'
+set :repo_url, 'https://a6946084a46dad4c9d0c65f2c053a2bb277d7b39:@github.com/k2works/capistrano_introduction_dev.git'
 
 # deploy.rb or stage file (staging.rb, production.rb or else)
 set :rvm_type, :system                    # Defaults to: :auto
@@ -45,8 +45,7 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      # Your restart mechanism here, for example:
-      # execute :touch, release_path.join('tmp/restart.txt')
+      invoke 'unicorn:restart'
     end
   end
 
