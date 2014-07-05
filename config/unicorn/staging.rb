@@ -28,6 +28,6 @@ before_fork do |server,worker|
   end
 end
 
-atfer_fork do |server,worker|
+after_fork do |server,worker|
   defined?(ActiveRecord::Base) and ActiveRecord::Base.establish_connection
 end
