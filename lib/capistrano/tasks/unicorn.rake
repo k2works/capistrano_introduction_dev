@@ -1,7 +1,7 @@
 namespace :unicorn do
   task :environment do
     set :unicorn_pid, "#{shared_path}/tmp/pids/unicorn.pid"
-    set :unicorn_config, "#{current_path}/config/uicorn/#{fetch(:rails_env)}.rb"
+    set :unicorn_config, "#{current_path}/config/unicorn/#{fetch(:rails_env)}.rb"
   end
 
   def start_unicorn
